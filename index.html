@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <script src="js/index.js"></script>
+  </head>
+  <noscript>Sorry, your browser does not support JavaScript!</noscript>
+  <body
+    style="
+      background-color: rgb(20, 18, 18);
+      min-height: 200vh;
+      overflow-x: scroll;
+      overflow-y: scroll;
+    "
+  >
+    <div class="page_header_wrap">
+      <!-- Header content goes here -->
+      <div class="side_bar">
+        <div class="sidebar_nav">
+          <div class="sidebar_nav_item">
+            <a href="#" class="sidebar_nav_link"
+              ><img src="resource/logo.png" class="sidebar_nav_link_img"
+            /></a>
+            <div class="sidebar_nav_dropdown">
+              <a href="#" class="sidebar_nav_dropdown_link">Новости</a>
+              <a href="#" class="sidebar_nav_dropdown_link">Друзья</a>
+              <a href="#" class="sidebar_nav_dropdown_link">Музыка</a>
+              <div class="line"></div>
+              <a href="#" class="sidebar_nav_dropdown_link">Помощь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header_search_box">
+        <input type="text" placeholder="Поиск..." class="header_search_input" />
+        <button type="submit" class="header_search_btn">
+          <img src="resource/search.png" class="header_search_btn_img" />
+        </button>
+        <div class="header_search_dropdown">
+          <a href="#" class="header_search_dropdown_link">Русский</a>
+          <a href="#" class="header_search_dropdown_link">Английский</a>
+          <a href="#" class="header_search_dropdown_link">Испанский</a>
+        </div>
+      </div>
+      <div
+        class="notification_button"
+        id="notification_button"
+        onclick="toggleDropdown('#notification_dropdown')"
+      >
+        <img src="resource/notification.png" class="notification_button_img" />
+        <div class="notification_button_badge">2</div>
+        <div id="notification_dropdown" class="hidden"></div>
+      </div>
+      <!-- <div class="top_audio_player">
+        <div class="top_audio_player_controls">
+          <img src="resource/play.png" class="top_audio_player_controls_img" />
+          <img src="resource/pause.png" class="top_audio_player_controls_img" />
+        </div>
+        <div class="top_audio_player_progress">
+          <div class="top_audio_player_progress_bar"></div>
+          <div class="top_audio_player_progress_time">0:00 / 0:00</div>
+        </div>
+      </div> -->
+      <audio controls class="top_audio_player" loop>
+        <source src="resource/mp3/бредишь.mp3" type="audio/mp3" />
+      </audio>
+      <div class="top_profile_link">
+        <a href="#" class="top_profile_link_img"
+          ><img src="resource/profile.png" class="top_profile_link_img"
+        /></a>
+        <div class="top_profile_link_dropdown">
+          <a href="#" class="top_profile_link_dropdown_link">Личный кабинет</a>
+          <a href="#" class="top_profile_link_dropdown_link">Настройки</a>
+          <a href="#" class="top_profile_link_dropdown_link">Выйти</a>
+        </div>
+      </div>
+    </div>
+    <div class="main_content">
+      <!-- Main content goes here -->
+      <div class="audio_player_box">
+        <div class="audio_player_progress">
+          <div class="audio_player_progress_bar">
+            <div class="audio_player_progress_time">0:00 / 0:00</div>
+          </div>
+        </div>
+        <div class="audio_player_controls">
+          <div class="audio_player_prev"></div>
+          <div class="audio_player_play">
+            <div class="audio_player_play_inner"></div>
+          </div>
+          <div class="audio_player_next"></div>
+          <div class="audio_player_shuffle">
+            <div class="arrow"><img src="resource/shuffle.png" /></div>
+          </div>
+          <div class="audio_player_volume">
+            <div class="audio_player_volume_bar">
+              <input
+                type="range"
+                value="10"
+                max="100"
+                class="audio_player_volume_line"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="audio_page_box">
+        <tr>
+          <td class="audio_page_box_ad">
+            <video
+              autoplay
+              muted
+              loop
+              class="audio_page_ad"
+              height="200"
+              width="750"
+              disablePictureInPicture
+            >
+              <source src="resource/mp4/бредишь.mp4" type="video/mp4" />
+            </video>
+          </td>
+        </tr>
+        <tr>
+          <td class="audio_page_box_2"></td>
+        </tr>
+        <tr>
+          <td class="audio_page_box_3"></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
